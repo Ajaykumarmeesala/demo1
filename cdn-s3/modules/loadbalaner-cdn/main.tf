@@ -2,7 +2,6 @@ resource "google_compute_global_address" "static_website_ip" {
   name = var.static_ip_name
 }
 
-
 resource "google_compute_target_http_proxy" "static_website_http_proxy" {
   name    = var.static_website_http_proxy_name
   url_map = var.url_map # google_compute_url_map.static_website_url_map.id
