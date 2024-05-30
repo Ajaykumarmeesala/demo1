@@ -11,16 +11,13 @@ branches:
 jobs:
 terraform:
 runs-on: ubuntu-latest
-
 steps:
 - name: Checkout code
 uses: actions/checkout@v2
-
 - name: Set up Terraform
 uses: hashicorp/setup-terraform@v2
 with:
 terraform_version: 1.3.0 # Use the required Terraform version
-
 - name: Install tflint
 run: |
 curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
